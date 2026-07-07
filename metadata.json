@@ -1,0 +1,6 @@
+{
+  "name": "Apresentação Pendências da Qualidade",
+  "description": "Apresentação executiva e dinâmica das pendências de qualidade da Gerência de Gestão de Pessoas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
