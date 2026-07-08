@@ -381,6 +381,13 @@ export const Slide3: React.FC<SlideProps> = ({ data }) => {
                           Obs: {rm.needsAction}
                         </span>
                       </div>
+                    ) : (rm.id === '11514' || rm.id === '11485') ? (
+                      <div className="mt-2.5 p-2.5 bg-blue-50 border border-blue-200 rounded-lg text-[10.5px] font-semibold text-blue-700 flex items-start gap-1.5">
+                        <AlertCircle size={12} className="flex-shrink-0 mt-0.5 text-blue-500" />
+                        <span>
+                          AGUARDANDO VERIFICAÇÃO DA QUALIDADE
+                        </span>
+                      </div>
                     ) : (
                       <div className="mt-2.5 p-2.5 bg-red-50 border border-brand/10 rounded-lg text-[10.5px] font-semibold text-brand flex items-start gap-1.5">
                         <AlertCircle size={12} className="flex-shrink-0 mt-0.5" />
