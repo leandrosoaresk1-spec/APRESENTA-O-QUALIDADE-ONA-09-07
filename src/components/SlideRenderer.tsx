@@ -1130,16 +1130,71 @@ export const SlideQualityCalendar: React.FC<SlideProps> = ({ data }) => {
           CALENDÁRIO - AUDITORIAS EXTERNAS DA QUALIDADE 2026
         </h2>
 
-        {/* Table Box identical to image */}
-        <div className="w-full max-w-2xl bg-white border border-gray-400/80 rounded-sm overflow-hidden shadow-xs">
-          {/* Header Banner (Red Bar with exact ONA 2022 - SANTA CASA BH text) */}
-          <div className="bg-[#B91C1C] text-white py-3.5 text-center font-sans font-bold text-sm tracking-widest border-b border-gray-400">
-            MANUAL ONA 2022 – SANTA CASA BH
+        {/* Grid layout showing both ONA 2022 and other Confirmed Audits */}
+        <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch px-4">
+          {/* Main ONA Audit Box */}
+          <div className="bg-white border border-gray-400/80 rounded-sm overflow-hidden shadow-xs flex flex-col justify-between">
+            <div>
+              <div className="bg-[#B91C1C] text-white py-3.5 text-center font-sans font-bold text-xs tracking-widest border-b border-gray-400 uppercase">
+                MANUAL ONA 2022 – SANTA CASA BH
+              </div>
+              <div className="py-8 px-4 text-center bg-white font-sans text-lg md:text-xl font-bold text-gray-800 tracking-wide flex flex-col items-center justify-center gap-2">
+                <Calendar className="text-[#B91C1C] w-6 h-6 shrink-0" />
+                <span>21/09/2026 a 25/09/2026</span>
+              </div>
+            </div>
+            <div className="bg-gray-50/50 border-t border-gray-100 py-2.5 px-4 text-center">
+              <span className="text-[9px] font-bold text-brand uppercase tracking-wider">Acreditação Hospitalar ONA</span>
+            </div>
           </div>
 
-          {/* Date Row */}
-          <div className="py-4 text-center bg-white font-sans text-lg md:text-xl font-bold text-gray-800 tracking-wide">
-            21/09/2026 a 25/09/2026
+          {/* Confirmed Audits Box */}
+          <div className="bg-white border border-gray-300 rounded-sm overflow-hidden shadow-xs flex flex-col justify-between">
+            <div>
+              <div className="bg-gray-800 text-white py-3.5 text-center font-sans font-bold text-xs tracking-widest border-b border-gray-300 uppercase">
+                AUDITORIAS ADICIONAIS CONFIRMADAS
+              </div>
+              <div className="p-4 space-y-3">
+                {/* Audit 1 */}
+                <div className="flex items-center justify-between p-2.5 bg-gray-50/80 border border-gray-100 rounded-sm">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center border border-blue-100 shrink-0">
+                      <Calendar className="text-blue-600 w-3.5 h-3.5" />
+                    </div>
+                    <div>
+                      <h4 className="text-[11px] font-bold text-gray-800 uppercase tracking-wider">ISO Faculdade</h4>
+                      <p className="text-[9px] text-gray-400 font-mono">CONFIRMADA</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <span className="inline-block px-2 py-0.5 text-[10px] font-bold text-blue-700 bg-blue-50 border border-blue-100 rounded-sm font-mono">
+                      08/09 a 09/09
+                    </span>
+                  </div>
+                </div>
+
+                {/* Audit 2 */}
+                <div className="flex items-center justify-between p-2.5 bg-gray-50/80 border border-gray-100 rounded-sm">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-7 h-7 rounded-full bg-emerald-50 flex items-center justify-center border border-emerald-100 shrink-0">
+                      <Calendar className="text-emerald-600 w-3.5 h-3.5" />
+                    </div>
+                    <div>
+                      <h4 className="text-[11px] font-bold text-gray-800 uppercase tracking-wider">Selo Unimed</h4>
+                      <p className="text-[9px] text-gray-400 font-mono">CONFIRMADA</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <span className="inline-block px-2 py-0.5 text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-sm font-mono">
+                      15/10 a 16/10
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gray-50/50 border-t border-gray-100 py-2.5 px-4 text-center">
+              <span className="text-[9px] font-bold text-gray-500 uppercase tracking-wider font-mono">Outras Certificações Externas</span>
+            </div>
           </div>
         </div>
 
