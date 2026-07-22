@@ -18,28 +18,28 @@ export const INITIAL_PRESENTATION_DATA: PresentationData = {
   metadata: {
     title: "Pendências Qualidade e ONA",
     subtitle: "Gerência de Gestão de Pessoas",
-    date: "07/07/2026",
+    date: "22/07/2026",
     author: "Gerência de Gestão de Pessoas"
   },
   comparative: {
     dates: {
       past: "26/03/2026",
-      current: "07/07/2026"
+      current: "22/07/2026"
     },
     metrics: {
-      rm: { past: 16, current: 27, change: "+11", trend: "up" },
+      rm: { past: 16, current: 25, change: "+9", trend: "up" },
       documentation: { past: 9, current: 6, change: "-3", trend: "down" },
       actionPlans: { past: 4, current: 4, change: "Estável", trend: "stable" }
     },
-    insight: "As RM aumentaram 68%, enquanto as documentações pendentes reduziram 33%. O principal foco deve ser a redução do passivo de Relatórios de Melhoria, mantendo o avanço na regularização documental."
+    insight: "As RM aumentaram 64%, enquanto as documentações pendentes reduziram 33%. O principal foco deve ser a redução do passivo de Relatórios de Melhoria, mantendo o avanço na regularização documental."
   },
   rmSlide: {
     byArea: [
       { area: "Administração de Pessoal", count: 9 },
-      { area: "Atração e Seleção", count: 4 },
-      { area: "DHO", count: 4 },
-      { area: "Segurança do Trabalho", count: 4 },
-      { area: "Medicina do Trabalho", count: 2 },
+      { area: "Atração e Seleção", count: 3 },
+      { area: "DHO", count: 5 },
+      { area: "Segurança do Trabalho", count: 3 },
+      { area: "Medicina do Trabalho", count: 1 },
       { area: "Gerência de Gestão de Pessoas", count: 2 },
       { area: "Consultoria Interna", count: 1 },
       { area: "Dimensionamento, Cargos e Remuneração", count: 1 }
@@ -166,15 +166,13 @@ export const INITIAL_PRESENTATION_DATA: PresentationData = {
 };
 
 export const INITIAL_RM_LIST: RawRMItem[] = [
-  // Atração e Seleção (4)
-  { id: "12275", title: "Atraso para processo de movimentação de colaborador", area: "Atração e Seleção", type: "Processo", status: "Pendente" },
+  // Atração e Seleção (3)
+  { id: "12275", title: "Atraso para processo de movimentação de colaborador", area: "Atração e Seleção", type: "Processo", status: "Recusado pela Qualidade", needsAction: "Analisar e mandar novamente" },
   { id: "9339", title: "AUDITORIA INTERNA DA QUALIDADE - CICLO 2025 - GERIR ATRAÇÃO E SELEÇÃO DE COLABORADORES ( AUDITORIA INTERNA )", area: "Atração e Seleção", type: "Auditoria Interna", status: "Recusado pela Qualidade", needsAction: "Analisar e mandar novamente" },
   { id: "12087", title: "AUDITORIA EXTERNA ISO 9001 - AMBULATÓRIOS ESPECIALIZADOS 2026 - GERIR ATRAÇÃO E SELEÇÃO DE COLABORADORES", area: "Atração e Seleção", type: "Auditoria Externa", status: "Pendente" },
-  { id: "10726", title: "AVALIAÇÃO DA QUALIDADE DAS ANÁLISES DOS INDICADORES - GERÊNCIA DE GESTÃO DE PESSOAS ( RM EM CONJUNTO COM A SEGURANÇA DO TRABALHO )", area: "Atração e Seleção", type: "Indicadores", status: "Pendente", needsAction: "Em Conjunto com Segurança" },
 
-  // Medicina do Trabalho (2)
+  // Medicina do Trabalho (1)
   { id: "11485", title: "Auditoria de Acreditação ONA 2025 - Promover Saúde e Segurança Ocupacional", area: "Medicina do Trabalho", type: "Acreditação ONA", status: "Aguardando Resposta", needsAction: "Necessita respondê-la" },
-  { id: "9718", title: "Ausência da realização do termo de feedback na avaliação de experiência", area: "Medicina do Trabalho", type: "Processo", status: "Recusado pela Qualidade", needsAction: "Analisar e mandar novamente" },
 
   // Administração de Pessoal (9)
   { id: "8527", title: "Atraso de manifestação ao cliente - Hospital 100% SUS", area: "Administração de Pessoal", type: "Manifestação Cliente", status: "Pendente" },
@@ -187,15 +185,15 @@ export const INITIAL_RM_LIST: RawRMItem[] = [
   { id: "11813", title: "Entrega de nota fiscal em desacordo com a diretriz", area: "Administração de Pessoal", type: "Nota Fiscal", status: "Pendente" },
   { id: "11961", title: "Falhas e inconsistências no ponto dos colaboradores do Centro de Autismo", area: "Administração de Pessoal", type: "Ponto de Pessoal", status: "Pendente" },
 
-  // DHO (4)
+  // DHO (5)
+  { id: "10774", title: "AUDITORIA EXTERNA ISO 9001:2015 - Hospital São Lucas/2025 - Gerir Capacitação e Desenvolvimento de Pessoas", area: "DHO", type: "Auditoria Externa", status: "Recusado pela Qualidade", needsAction: "Analisar e mandar novamente" },
   { id: "11514", title: "Auditoria de Acreditação ONA 2025 - Gerir Capacitação e Desenvolvimento", area: "DHO", type: "Acreditação ONA", status: "Aguardando Resposta", needsAction: "Necessita respondê-la" },
   { id: "12088", title: "Auditoria Externa ISO 9001:2015 - Ambulatórios Especializados 2026", area: "DHO", type: "Auditoria Externa", status: "Pendente" },
   { id: "9831", title: "Auditoria Interna da Qualidade - Ciclo 2025 - Gerir Capacitação e Desenvolvimento", area: "DHO", type: "Auditoria Interna", status: "Pendente" },
   { id: "12213", title: "Entrega de nota fiscal em desacordo com a diretriz", area: "DHO", type: "Nota Fiscal", status: "Pendente", needsAction: "Verificar se condiz ou se foi aberto erroneamente" },
 
-  // Segurança do Trabalho (4)
+  // Segurança do Trabalho (3)
   { id: "9387", title: "Auditoria Interna da Qualidade - Ciclo 2025 - Promover Saúde e Segurança", area: "Segurança do Trabalho", type: "Auditoria Interna", status: "Recusado pela Qualidade", needsAction: "Analisar e mandar novamente" },
-  { id: "10726", title: "Avaliação da qualidade das análises dos indicadores - Gerência de Gestão de Pessoas", area: "Segurança do Trabalho", type: "Indicadores", status: "Pendente", needsAction: "Em Conjunto com Atração" },
   { id: "11998", title: "Entrega de nota fiscal em desacordo com a diretriz", area: "Segurança do Trabalho", type: "Nota Fiscal", status: "Pendente" },
   { id: "11994", title: "Entrega de nota fiscal em desacordo com a diretriz", area: "Segurança do Trabalho", type: "Nota Fiscal", status: "Pendente" },
 

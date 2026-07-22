@@ -137,7 +137,7 @@ export const Slide2: React.FC<SlideProps> = ({ data }) => {
                 <div className="flex items-baseline gap-1">
                   <span className="text-5xl font-display font-bold text-gray-900">{metrics.rm.current}</span>
                   <span className="text-[10px] text-emerald-600 bg-emerald-50/80 border border-emerald-100 px-1 py-0.5 rounded-md font-bold tracking-tight font-sans self-end mb-1">
-                    +17(novas)
+                    +15(novas)
                   </span>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export const Slide2: React.FC<SlideProps> = ({ data }) => {
           <div className="mt-4 pt-4 border-t border-gray-50 flex items-center justify-between">
             <span className="text-xs text-gray-500">Variação no período</span>
             <span className="px-2.5 py-0.5 bg-brand-muted text-brand text-xs font-mono font-bold rounded-full flex items-center gap-1">
-              ▲ +68% (+11 RM)
+              ▲ +64% (+9 RM)
             </span>
           </div>
         </div>
@@ -264,7 +264,7 @@ export const Slide3: React.FC<SlideProps> = ({ data }) => {
           </h2>
         </div>
         <div className="font-mono text-xs text-gray-400">
-          Total de Pendências: <span className="text-brand font-bold">27</span>
+          Total de Pendências: <span className="text-brand font-bold">{INITIAL_RM_LIST.length}</span>
         </div>
       </div>
 
@@ -485,7 +485,7 @@ export const SlideRMAttention: React.FC<SlideProps> = ({ data }) => {
                 <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Priorização de Auditorias</h3>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="font-mono text-[10px] text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded uppercase">Internas & Externas</span>
-                  <span className="font-mono text-[10px] text-amber-700 font-bold bg-amber-50 border border-amber-100 px-2 py-0.5 rounded uppercase">6 RM de Auditorias</span>
+                  <span className="font-mono text-[10px] text-amber-700 font-bold bg-amber-50 border border-amber-100 px-2 py-0.5 rounded uppercase">7 RM</span>
                 </div>
               </div>
             </div>
@@ -1175,7 +1175,7 @@ export const SlideQualityCalendar: React.FC<SlideProps> = ({ data }) => {
                   </div>
                   <div className="text-right">
                     <span className="inline-block px-2 py-0.5 text-[10px] font-bold text-blue-700 bg-blue-50 border border-blue-100 rounded-sm font-mono">
-                      08/09 a 09/09
+                      18 e 19/11
                     </span>
                   </div>
                 </div>
